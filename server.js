@@ -1,7 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
-
+const port = process.env.PORT || 3000;
 var app = express();
 
 app.set('viewengine', 'hbs');
@@ -43,6 +43,6 @@ app.get('/about', (req, res) => {
     })
 });
 
-app.listen(3000, () => {
-    console.log('Server started');
+app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
 });
