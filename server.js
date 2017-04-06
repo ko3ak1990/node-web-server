@@ -47,6 +47,6 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(process.env.PORT , () => {
+app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
 });
